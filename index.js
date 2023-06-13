@@ -20,6 +20,7 @@ app.listen(4040, () => {
 })
 
 const mongoDB = require('./db')
+const { food_catogaries, food_items } = require('./Models/FoodData')
 mongoDB()
 
 app.get('/', (req, res) => {
@@ -28,8 +29,9 @@ app.get('/', (req, res) => {
 
 app.use('/api', require('./Routes/CreateUser'))
 app.use('/api', require('./Routes/displayData'))
+
 app.get('/all', async (req, res) => {
-  const alldata = await User.find({})
+  const alldata = await food_items.find({})
   res.json({
     data: alldata,
   })
