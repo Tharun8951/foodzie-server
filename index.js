@@ -4,7 +4,12 @@ const cors = require('cors')
 const User = require('./Models/User')
 require('dotenv').config()
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://foodzie-client.vercel.app",
+        "http://localhost:3000"
+]
+}));
 
 
 
