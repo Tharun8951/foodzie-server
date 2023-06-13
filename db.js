@@ -18,6 +18,7 @@ const mongoDB = async () => {
     global.food_items = data_items
     global.food_cat = data_cat
 
+
     // mongoose.connection.close(); // Close the connection after retrieving data
   } catch (err) {
     console.error(err);
