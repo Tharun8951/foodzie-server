@@ -9,7 +9,6 @@ app.use(
     origin: [
       'http://localhost:3000',
       'https://foodzie-client.vercel.app',
-    //   'https://mern-netclix-client.vercel.app',
     ],
   }),
 )
